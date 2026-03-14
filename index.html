@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل طالب - الهيئة الطلابية - كلية الهندسة الزراعية</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; background: #f4f4f4; }
+        form { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        button { background: #25D366; color: white; font-size: 18px; cursor: pointer; }
+        button:hover { background: #128C7E; }
+        .error { color: red; }
+        h1 { color: #333; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>📋 تسجيل في الهيئة الطلابية<br>كلية الهندسة الزراعية</h1>
+    {% if request.query_params.error %}
+        <p class="error">خطأ: {{ request.query_params.error }}. يرجى المحاولة مرة أخرى.</p>
+    {% endif %}
+    <form action="/register" method="post">
+        <label>الاسم الثلاثي:</label>
+        <input type="text" name="full_name" required>
+        
+        <label>الرقم الجامعي:</label>
+        <input type="text" name="student_id" required>
+        
+        <label>رقم الواتساب:</label>
+        <input type="tel" name="whatsapp_number" placeholder="01xxxxxxxxx" required>
+        
+        <label>السنة الدراسية:</label>
+        <select name="year" required>
+            <option value="">اختر...</option>
+            <option value="السنة الأولى">السنة الأولى</option>
+            <option value="السنة الثانية">السنة الثانية</option>
+            <option value="السنة الثالثة">السنة الثالثة</option>
+            <option value="السنة الرابعة">السنة الرابعة</option>
+            <option value="السنة الخامسة">السنة الخامسة</option>
+        </select>
+        
+        <button type="submit">إرسال وانضمام إلى المجموعة</button>
+    </form>
+    <p style="text-align: center; margin-top: 20px;">
+        <a href="/export" style="color: #25D366;">📊 تحميل قائمة Excel</a> | 
+        <a href="/students" style="color: #007BFF;">👥 عرض الطلاب</a>
+    </p>
+</body>
+</html>
