@@ -1,1 +1,4 @@
 https://github.com/Khaled12as/Union-System-Homs.git
+
+SELECT * FROM public.students 
+WHERE study_year = 'السنة الرابعة';
