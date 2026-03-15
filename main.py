@@ -8,9 +8,9 @@ app = FastAPI(title="Agri-Union Homs")
 
 # روابط مجتمعات الواتساب (يرجى وضع الروابط الحقيقية هنا)
 COMMUNITY_GROUPS = {
-    "السنة الأولى": "https://chat.whatsapp.com/KYFfLhFPC3X19ZHC3VlzL0?mode=gi_t",
+    "السنة الأولى": "https://chat.whatsapp.com/DLYZGtkr5ZMA40EBAn0xkg?mode=gi_t",
     "السنة الثانية": "https://chat.whatsapp.com/Hs359jGCUAw9w1O9jXIXVC?mode=gi_t",
-    "السنة الثالثة": "https://chat.whatsapp.com/CfqLCkejcHREknO59FT04S?mode=gi_t",
+    "السنة الثالثة": "https://chat.whatsapp.com/JV7DryJiqgD7MgNIxsA5Uy?mode=gi_t",
     "السنة الرابعة": "https://chat.whatsapp.com/EXOpeeaEDfO2qvvtldCZrb?mode=gi_t",
     "السنة الخامسة": "https://chat.whatsapp.com/DrihEQImyX4Bzgv36Skggb?mode=gi_t",
 }
