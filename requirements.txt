@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 fastapi
 uvicorn
 supabase
-=======
-fastapi
-uvicorn
-supabase
-pandas
-openpyxl
->>>>>>> 836e488d965fccb7bd307622b06befa681cd6e64
 python-multipart
