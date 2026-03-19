@@ -212,12 +212,13 @@ HTML_TEMPLATE = """
             100% { transform: scale(1); opacity: 0.5; }
         }
 
-        .logo-frame:hover {
-            transform: rotate(720deg) scale(1.15);
-            box-shadow: 0 30px 60px rgba(255, 215, 0, 0.7);
-            border-color: var(--eid-night);
-        }
-
+.logo-frame img { 
+    width: 80%;       /* تقليل العرض قليلاً ليظهر الشعار كاملاً */
+    height: 80%;      /* تقليل الارتفاع لترك مساحة بيضاء "تنفس" للشعار */
+    object-fit: contain; 
+    animation: vibrantWiggle 2.5s infinite alternate ease-in-out; 
+    border-radius: 0;  /* تأكد أن الصورة نفسها ليست مدورة إذا كانت شفافة */
+}
         h1 { 
             color: var(--primary-green); 
             margin: 0; 
